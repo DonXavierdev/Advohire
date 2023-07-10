@@ -34,29 +34,15 @@ $user_data=$logged_user->get_data($id);
 }
 </style>
 <body>
-    <div class="login-div">
-           <h1>Welcome <?php echo $user_data['name'] ?></h1>
-        <p id="here">User ID:<?php echo $user_data['userid'] ?></p>
-
-         
+<div class="login-div">
+        <h1>Welcome <?php echo $user_data['name'] ?></h1>
+        <p>User ID:<?php echo $user_data['userid'] ?></p>
         <p>Username:<?php echo $user_data['name'] ?></p>
-
-          
         <p>Email:<?php echo $user_data['email'] ?></p>
-      
-       
         <p>Gender:<?php echo $user_data['gender'] ?></p>
-
-    
         <p>Specialised In:<?php echo $user_data['specialisation'] ?></p>
-  
-  
         <p>Commencement Date:<?php echo $user_data['commencement'] ?></p>
- 
-         
         <p>Court:<?php echo $user_data['court'] ?></p>
-       
-        
     </div>
 </body>
 </html>
