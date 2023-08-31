@@ -1,6 +1,6 @@
 body{
-     background-image: url("law.jpg");
-    background-size: cover;  
+    background-image: url("law.jpg");
+    background-size: cover; 
     /* background: linear-gradient(120deg,#8a8a8a,#00aeef);   */
     height: 100vh;
     margin:0;
@@ -171,55 +171,3 @@ form .input-data{
 }
 
                             /* Home Page */
-.container{
-    margin-top: 50px;
-    
-    display: flex;
-    height: 70vh;
-    flex-wrap: wrap;
-    align-content: center;
-    gap:5em;
-    text-align: center;
-}
-.advolists{
-    border: 1px solid red;
-    width: 350px;
-    height: 150px;
-}
-.nav-bar{
-    background-color: #8a8a8a;
-    color: white;
-    height: 80px;
-    font-weight: 500;
-}
-.nav-bar a{
-    color: #00aeef;
-    text-decoration: none;
-    font-size: 30px;
-    padding-top: 10px;
-}
-ul{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-}
-#icon{
-    font-size: 20px;
-    padding-right: 10px;
-}
-li{
-    display: inline;
-    padding-top: 25px;
-}
-#searching{
-    padding-top: 25px;
-}
-#logo{
-    font-size: 50px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-#search-bar{
-    width: 175px;
-    height: 25px;
-}
