@@ -27,7 +27,7 @@
     }
     .container h1::after{
         content:'';
-        background: #303ef7;
+        background:  #00aeef;/*#303ef7;*/
         width: 100px;
         height: 5px;
         position: absolute;
@@ -52,36 +52,35 @@
     .service i{
         font-size: 40px;
         margin-bottom: 10px;
-        color:#303ef7;
+        color: #00aeef;
     }
     .service h2{
         font-weight: 600;
         margin-bottom: 8px;
     }
     .service:hover{
-        background: #303ef7;
+        background:  #00aeef;
         color:#fff;
         transform: scale(1.05);
     }
     .service:hover i{
         color:#fff;
     }
+    .row a{
+        text-decoration: none;
+        color:#000;
+    }
 </style>
 <body>
     <div class="container">
         <h1>Our services</h1>
         <div class="row">
-            <div class="service">
-                <i class="fa-solid fa-briefcase"></i>
-                <h2>Web design</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing</p>
-            </div>
-            <div class="service">
-                <i class="fa-solid fa-briefcase"></i>
-                <h2>Marketing</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing</p>
-            </div>
-            <div class="service">
+            <a href="advolist.php"><div class="service">
+            <i class="fa-solid fa-magnifying-glass"></i>
+                <h2>AdvoSearch</h2>
+                <p>Search for advocates according to your needs</p>
+            </div></a>
+            <!-- <div class="service">
                 <i class="fa-solid fa-briefcase"></i>
                 <h2>Marketing</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing</p>
@@ -101,6 +100,11 @@
                 <h2>Marketing</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing</p>
             </div>
+            <div class="service">
+                <i class="fa-solid fa-briefcase"></i>
+                <h2>Marketing</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing</p>
+            </div> -->
         </div>
     </div>
 </body>

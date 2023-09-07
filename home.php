@@ -10,11 +10,12 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family:Helvetica;
     }
     .banner{
     width: 100%;
     height: 100vh;
-    background-image:linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.75)),url(bg.jpg);
+    background-image:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),url(bg.jpg);
     background-size:cover;
     background-position: center;
 }
@@ -118,13 +119,14 @@ button:hover{
             <li><a href="services.php">Services</a></li>
             <li><a href="contact.php">Contact</a></li>
             <li><a href="profile.php">Profile</a></li>
+            <li><a href="logout.php">Logout</a></li>
         </ul>
     </div>
     <div class="content">
         <h1>Welcome To Advohire</h1>
         <p>Find and Communicate with available advocates and clients with ease</p>
         <div>
-            <button type="button"><span></span>Find More</button>
+        <button type="button" onclick="window.location.href = 'advolist.php'"><span></span>Find More</button>
         </div>
     </div>
 </div>

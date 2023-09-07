@@ -127,13 +127,15 @@ form .input-data{
     
 }
 .input-data input:focus ~label,
-.input-data input:valid ~label{
+.input-data input:valid ~label,
+.input-data:not(:placeholder-shown) + label {
     top:-5px;
     color: #00aeef;
 }
+
 .input-data input:focus ~span::before,
 .input-data input:valid ~span::before{
- 
+    
     width: 100%;
 }
 .register-link{
@@ -148,7 +150,7 @@ form .input-data{
 }
 .register-link a:hover{
     color: #8a8a8a;
-   
+    
 }
 .login-div input[type="submit"]{
     width: 80%;
@@ -169,5 +171,3 @@ form .input-data{
     border-color: #8a8a8a;
     box-shadow: #00aeef 0 6px 12px;
 }
-
-                            /* Home Page */

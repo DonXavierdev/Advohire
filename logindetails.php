@@ -13,9 +13,10 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $result=$DB->read($query);
             if($result){
                 $row=$result[0];
-                
+
                 if($password==$row['password']){
                     $_SESSION['userid']=$row['userid'];
+                    $_SESSION['Type']=$row['Type'];
                     header("Location:profile.php");
                     die;
                 }

@@ -15,7 +15,7 @@
         background-position: center;
         background-size: cover;
         font-size: 20px;
-        font-family: sans-serif;
+        font-family: 'poppins';
     }
     .container{
         width:80%;

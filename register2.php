@@ -6,6 +6,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 class signup{
     public function create_user($data){
         $userid=$this->create_userid();
+        $type='Advocate';
         $name=$data['name'];
         $password=$data['password'];
         $email=$data['email'];
@@ -14,9 +15,9 @@ class signup{
         $specialisation=$data['specialisation'];
         $court=$data['court'];
         $query = "insert into users
-        (userid,name,email,password,gender,specialisation,commencement,court)
+        (userid,Type,name,email,password,gender,specialisation,commencement,court)
         values
-        ('$userid','$name','$email','$password','$gender','$specialisation','$commencement','$court')";
+        ('$userid','$type','$name','$email','$password','$gender','$specialisation','$commencement','$court')";
         $DB=new database();
         $DB->save($query);
         header("Location: main-login.php");
@@ -43,12 +44,15 @@ $call->create_user($_POST);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
     <div class="login-div">
 
         <h1>Sign Up</h1>
-        <form method="post"action="register2.php">
+        <form method="post" action="register2.php">
+
             <div class="input-data">
             
                 <input type="text" name="name"required>

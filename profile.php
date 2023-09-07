@@ -33,12 +33,14 @@ $user_data=$logged_user->get_data($id);
         box-sizing: border-box;
         font-family: sans-serif;
     }
+    body{
+        background-image:linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.75)),url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    }
     .container{
     width:100%;
     height:100vh;
-    background-image:linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.75)),url(bg.jpg);
-    background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,24 +73,41 @@ $user_data=$logged_user->get_data($id);
     width: 150px;
     font-size: 40px;
     cursor: pointer;
-    position: absolute;
-    top:10;
-    left: 10;
+    padding:40px;
+}
+.headers{
+    display: flex;
+    justify-content:space-between;
+}
+#logout{
+    text-decoration: none;
+    color:#00aeef;
+    font-size: 30px;
+    padding:40px;
 }
 </style>
 <body>
+    <div class="headers">
+<a id="logo"href="home.php">ADVOHIRE</a>
+<a id="logout"href="logout.php">Logout</a></div>
     <div class="container">
-    <a id="logo"href="home.php">ADVOHIRE</a>
         <div class="profile-box">
-            <img src="shanks.jpg" class="profile-pic">
-            <h1> <?php echo $user_data['name'] ?></h3>
-            <p>User ID : <?php echo $user_data['userid'] ?></p>
-            <p>Username : <?php echo $user_data['name'] ?></p>
-            <p>Email : <?php echo $user_data['email'] ?></p>
-            <p>Gender : <?php echo $user_data['gender'] ?></p>
-            <p>Specialised In : <?php echo $user_data['specialisation'] ?></p>
-            <p>Commencement Date : <?php echo $user_data['commencement'] ?></p>
-            <p>Court : <?php echo $user_data['court'] ?></p>
+            <img src="image.jpeg" class="profile-pic">
+            <h1> <?php echo $user_data['name'] ?></h1>
+            <?php if ($user_data['Type'] == 'Client'): ?>
+                <p>User ID : <?php echo $user_data['userid'] ?></p>
+                <p>Username : <?php echo $user_data['name'] ?></p>
+                <p>Email : <?php echo $user_data['email'] ?></p>
+                <p>Gender : <?php echo $user_data['gender'] ?></p>
+            <?php else: ?>
+                <p>User ID : <?php echo $user_data['userid'] ?></p>
+                <p>Username : <?php echo $user_data['name'] ?></p>
+                <p>Email : <?php echo $user_data['email'] ?></p>
+                <p>Gender : <?php echo $user_data['gender'] ?></p>
+                <p>Specialised In : <?php echo $user_data['specialisation'] ?></p>
+                <p>Commencement Date : <?php echo $user_data['commencement'] ?></p>
+                <p>Court : <?php echo $user_data['court'] ?></p>
+            <?php endif; ?>
         </div>
     </div>
 </body>
